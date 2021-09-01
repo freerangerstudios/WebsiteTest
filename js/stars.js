@@ -8,11 +8,12 @@ window.onload = window.onresize = function() {
         var x = Math.max(r, Math.round(Math.random() * canvas.clientWidth) - r);
         var y = Math.max(r, Math.round(Math.random() * canvas.clientHeight) - r);
 
-        var color = "#8ad4ff";
-        if(randomRange(1, 100) > 50){
-            color = "#ffffff";
-        }
-        ctx.fillStyle = color;
+        let colors = [
+            '#ffffff', '#8ad4ff', '#ffebb4',
+            '#c0ffab', '#ff9696', '#b395ff'
+        ];
+
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
         ctx.beginPath();
         ctx.arc(x, y, r, 0, 2 * Math.PI);
         ctx.fill()
