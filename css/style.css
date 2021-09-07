@@ -4,12 +4,40 @@ body{
     background-attachment: fixed;
 }
 
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 3px !important;
+    -webkit-text-stroke-color: black;
+    margin: 5px 0 7px;
+}
+
+.rainbow {
+    animation: color-change 1s infinite;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+@keyframes color-change {
+    0%   { -webkit-text-fill-color: #ff0000; }
+    10%  { -webkit-text-fill-color: #ff4400; }
+    20%  { -webkit-text-fill-color: #ff6a00; }
+    30%  { -webkit-text-fill-color: #ffff00; }
+    40%  { -webkit-text-fill-color: #bfff00; }
+    50%  { -webkit-text-fill-color: #00ff95; }
+    60%  { -webkit-text-fill-color: #00d0ff; }
+    70%  { -webkit-text-fill-color: #0080ff; }
+    80%  { -webkit-text-fill-color: #6600ff; }
+    90%  { -webkit-text-fill-color: #b700ff; }
+    100% { -webkit-text-fill-color: #ff00b7; }
+}
+
 .main{
     margin-left: 20%;
     margin-right: 20%;
     text-align: center;
     background-color: #FFF;
-    font-family: arial;
+    font-family: arial, sans-serif;
     color: black;
 }
 
@@ -29,19 +57,4 @@ body{
 
 #bannerImage{
     width: 100%;
-}
-
-#hiddenLink{
-    color: black;
-    text-decoration: none;
-}
-
-#hiddenLink:hover{
-    color: black;
-    text-decoration: none;
-}
-
-#hiddenLink:active{
-    color: black;
-    text-decoration: none;
 }
